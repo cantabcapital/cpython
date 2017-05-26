@@ -3,8 +3,8 @@
   <Import Project="pyproject.props" />
   <PropertyGroup>
     <TclMajorVersion>8</TclMajorVersion>
-    <TclMinorVersion>5</TclMinorVersion>
-    <TclPatchLevel>15</TclPatchLevel>
+    <TclMinorVersion>6</TclMinorVersion>
+    <TclPatchLevel>6</TclPatchLevel>
     <TclRevision>0</TclRevision>
     <TkMajorVersion>$(TclMajorVersion)</TkMajorVersion>
     <TkMinorVersion>$(TclMinorVersion)</TkMinorVersion>
@@ -14,20 +14,20 @@
     <TixMinorVersion>4</TixMinorVersion>
     <TixPatchLevel>3</TixPatchLevel>
     <TixRevision>5</TixRevision>
-    <tclDir>$(ExternalsDir)tcl-$(TclMajorVersion).$(TclMinorVersion).$(TclPatchLevel).$(TclRevision)\</tclDir>
-    <tkDir>$(ExternalsDir)tk-$(TkMajorVersion).$(TkMinorVersion).$(TkPatchLevel).$(TkRevision)\</tkDir>
+    <tclDir>$(externalsDir)\tcl\install</tclDir>
+    <tkDir>$(externalsDir)\tk\install</tkDir>
     <tixDir>$(ExternalsDir)tix-$(TixMajorVersion).$(TixMinorVersion).$(TixPatchLevel).$(TixRevision)\</tixDir>
     <tcltkDir>$(ExternalsDir)tcltk\</tcltkDir>
     <tcltkDir Condition="'$(Platform)' == 'x64'">$(ExternalsDir)tcltk64\</tcltkDir>
     <TclDebugExt Condition="'$(Configuration)' == 'Debug'">g</TclDebugExt>
-    <tclDLLName>tcl$(TclMajorVersion)$(TclMinorVersion)$(TclDebugExt).dll</tclDLLName>
-    <tclLibName>tcl$(TclMajorVersion)$(TclMinorVersion)$(TclDebugExt).lib</tclLibName>
-    <tclShExeName>tclsh$(TclMajorVersion)$(TclMinorVersion)$(TclDebugExt).exe</tclShExeName>
-    <tkDLLName>tk$(TkMajorVersion)$(TkMinorVersion)$(TclDebugExt).dll</tkDLLName>
-    <tkLibName>tk$(TkMajorVersion)$(TkMinorVersion)$(TclDebugExt).lib</tkLibName>
-    <tixDLLName>tix$(TixMajorVersion)$(TixMinorVersion)$(TclDebugExt).dll</tixDLLName>
+    <tclDLLName>tcl$(TclMajorVersion)$(TclMinorVersion)$(TclDebugExt)t.dll</tclDLLName>
+    <tclLibName>tcl$(TclMajorVersion)$(TclMinorVersion)$(TclDebugExt)t.lib</tclLibName>
+    <tclShExeName>tclsh$(TclMajorVersion)$(TclMinorVersion)$(TclDebugExt)t.exe</tclShExeName>
+    <tkDLLName>tk$(TkMajorVersion)$(TkMinorVersion)$(TclDebugExt)t.dll</tkDLLName>
+    <tkLibName>tk$(TkMajorVersion)$(TkMinorVersion)$(TclDebugExt)t.lib</tkLibName>
+    <tixDLLName>tix$(TixMajorVersion)$(TixMinorVersion)$(TclDebugExt)t.dll</tixDLLName>
     <tixDLLPath>$(tcltkDir)lib\tix$(TixMajorVersion).$(TixMinorVersion).$(TixPatchLevel)\$(tixDLLName)</tixDLLPath>
-    <tcltkLib>$(tcltkDir)lib\tcl$(TclMajorVersion)$(TclMinorVersion)$(TclDebugExt).lib;$(tcltkDir)lib\tk$(TkMajorVersion)$(TkMinorVersion)$(TclDebugExt).lib</tcltkLib>
+    <tcltkLib>$(tcltkDir)lib\tcl$(TclMajorVersion)$(TclMinorVersion)$(TclDebugExt)t.lib;$(tcltkDir)lib\tk$(TkMajorVersion)$(TkMinorVersion)$(TclDebugExt)t.lib</tcltkLib>
     <TclMachine>IX86</TclMachine>
     <TclMachine Condition="'$(Platform)' == 'x64'">AMD64</TclMachine>
     <TclVersions>TCL_MAJOR_VERSION=$(TclMajorVersion) TCL_MINOR_VERSION=$(TclMinorVersion) TCL_PATCH_LEVEL=$(TclPatchLevel)</TclVersions>
